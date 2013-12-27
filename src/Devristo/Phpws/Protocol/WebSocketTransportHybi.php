@@ -225,6 +225,7 @@ class WebSocketTransportHybi extends WebSocketTransport
         $request->getHeaders()->addHeaderLine("Sec-WebSocket-Key", $challenge);
         $request->getHeaders()->addHeaderLine("Sec-WebSocket-Version", 13);
         $request->getHeaders()->addHeaderLine("Upgrade", "websocket");
+        $request->getHeaders()->addHeaderLine("Origin", "http://example.com/");
 
         $this->setRequest($request);
 
